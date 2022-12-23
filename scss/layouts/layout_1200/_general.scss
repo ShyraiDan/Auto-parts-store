@@ -1,0 +1,16 @@
+.header{
+    @include e(container){
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    @include e(input){
+        width: 400px;
+    }
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+@include m(first){
+    padding: 0;
+}
+}
