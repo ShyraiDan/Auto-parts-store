@@ -1,0 +1,32 @@
+.container{
+    min-width: 576px;
+}
+.header{
+    @include e(top){
+        padding: 0 40px;
+    }
+    @include e(nav-top){
+        display: flex;
+    }
+    @include e(nav-item){
+        margin-right: 15px;
+    }
+    @include e(img-container){
+        width: 215px;
+    
+    }
+}
+.filter{
+    margin-bottom: 40px;
+    @include e(list){
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @include e(item){
+        margin-bottom: 0;
+        margin-right: 20px;
+        
+    }
+    
+}
