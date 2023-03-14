@@ -1,0 +1,8 @@
+.slider{
+
+    @include e(container){
+        
+        flex-direction:row;
+        
+    }
+}

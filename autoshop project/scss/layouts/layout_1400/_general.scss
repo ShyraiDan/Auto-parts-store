@@ -1,0 +1,9 @@
+.container{
+    
+        @include m(pd){
+            max-width: 1920px;
+            display: grid;
+            grid-template-columns:  31.5% 31.5% 31.5%;
+        }
+    
+}

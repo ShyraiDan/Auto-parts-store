@@ -1,0 +1,142 @@
+.header{
+    @include e(line){
+        display: none;
+    }
+    @include e(left){
+        margin: 0;
+    }
+    @include e(burger){
+        margin-right: 10px;
+        @include m(invis){
+            display: none;
+        }
+    }
+    @include e(list){
+        display: flex;
+        flex-direction: row;
+        
+    }
+    @include e(burger-right){
+        display: none;
+    }
+
+}
+.nav-bar{
+display: block;
+    @include e(list){
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    @include e(item){
+        margin-right: 20px;
+        @include m(main){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffba00;
+            padding: 26px 25px;
+            margin-right: 35px;
+        }
+    }
+    @include e(link){
+        font-size: 15px;
+        font-weight: bolder;
+        line-height: 30px;
+        color: #fff;
+        @include m(black){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: #1e2843;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+            
+            
+        }
+    }
+    @include e(submenu){
+        margin-left: 10px;
+        color: #fff;
+    }
+}
+.social{
+    margin: 30px 0;
+
+}
+.scrolled{
+    position: fixed;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+  opacity: 0;
+  top: -50px;
+    }
+    to {
+      opacity: 1;
+      top: 0px;
+    }
+  }
+  .nav-bar{
+    @include e(item){
+        position: relative;
+        padding: 26px 0;
+        @include m(main){
+            padding: 26px 25px;
+        }
+    }
+
+  }
+  .sublist{
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    padding: 0 10px;
+    min-width: 200px;
+    @include m(main){
+        top: 100%;
+        min-width: 230px;
+    }
+    @include e(link){
+        display: block;
+        padding: 14px 0px;
+        border-bottom: 1px solid #e9e5df;
+        line-height: 24px;
+        font-weight: bolder;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #2a2a2a;
+        text-align: left;
+        transition: all 0.3s ease 0s;
+    }
+    @include e(item){
+        
+    }
+}
+  .nav-bar__item:hover  .sublist{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all 0.3s ease 0s;
+    pointer-events: all;
+  }
+  .sublist__link:hover{
+    color: #ff5134;
+  }
